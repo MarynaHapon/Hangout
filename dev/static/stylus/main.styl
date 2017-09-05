@@ -7,7 +7,8 @@
 @import 'common_styles.styl'
 	// modules
 @import 'modules/header.styl'
-@import 'modules/grid.styl'
+@import 'modules/about.styl'
+
 @import 'modules/footer.styl'
 	// component
 @import 'modules/menu.styl'
@@ -15,6 +16,8 @@
 @import 'pages/index.styl'
 	// media
 @import 'media.styl'
+	// test
+@import 'modules/grid.styl'
 
 html
 	line-height 1
@@ -23,7 +26,8 @@ html
 
 body
 	overflow-x hidden
-	//font-family 'Oswald', sans-serif
+	transition background 1s ease
+	background-color $soapstone
 
 
 h1,h2,h3,h4,h5,h6
