@@ -1,0 +1,68 @@
+.about
+    size(100%,auto)
+    background-color $alizarin
+
+    // first
+.about-grid-first
+    display grid
+    grid-template 150px auto 150px / 200px 1fr 200px
+
+
+.about-grid-first-item
+    margin 10px
+    background-color $white
+
+    // second
+.about-grid-second
+    display grid
+    grid-template-rows 200px 1fr 200px
+    grid-template-columns 300px 1fr 300px
+    grid-template-areas "header header header"\
+                        "left main right"\
+                        "footer footer footer"
+
+
+
+.about-grid-second-header
+.about-grid-second-left
+.about-grid-second-right
+.about-grid-second-main
+.about-grid-second-footer
+    margin 10px
+    background-color $white
+
+    p
+        display inline-block
+
+
+.about-grid-second-header
+    grid-area header
+
+
+.about-grid-second-left
+    grid-area left
+
+
+.about-grid-second-main
+    grid-area main
+    height 400px
+
+
+.about-grid-second-right
+    grid-area right
+
+
+.about-grid-second-footer
+    grid-area footer
+
+    // third
+.about-grid-third
+    display grid
+    grid-template-columns 1fr 1fr
+    grid-column-gap 20px
+    grid-row-gap 20px
+
+
+.about-grid-third-item
+    size(100%, 50px)
+    background-color $white

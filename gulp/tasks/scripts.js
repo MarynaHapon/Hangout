@@ -23,4 +23,18 @@ module.exports = function() {
                 stream: true
             }));
     });
+
+    var uglify = require('gulp-uglifyjs');
+    $.gulp.task('js:uglify', () => {
+        return $.gulp.src('./build/static/js/main.js')
+            .pipe(uglify())
+            .pipe($.gulp.dest('./build/static/js/'))
+    });
+
+    var concat = require('gulp-concat');
+    $.gulp.task('js:concat', () => {
+        return $.gulp.src(['./build/static/js/jquery.js', './build/static/js/main.js'])
+            .pipe(concat('script.min.js'))
+            .pipe($.gulp.dest('./build/static/js/'));
+    });
 };

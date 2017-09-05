@@ -1,8 +1,20 @@
+	// extra
 @import 'fonts.styl'
 @import 'vars.styl'
 @import 'libs.styl'
 @import 'mixins.styl'
-
+	// common
+@import 'common_styles.styl'
+	// modules
+@import 'modules/header.styl'
+@import 'modules/about.styl'
+@import 'modules/footer.styl'
+	// component
+@import 'modules/menu.styl'
+	// pages
+@import 'pages/index.styl'
+	// media
+@import 'media.styl'
 
 html
 	line-height 1
@@ -10,6 +22,7 @@ html
 
 
 body
+	overflow-x hidden
 	//font-family 'Oswald', sans-serif
 
 
@@ -61,19 +74,3 @@ button
 
 
 
-@import 'common_styles.styl'
-
-
-@import 'modules/header.styl'
-
-
-@import 'modules/footer.styl'
-
-
-@import 'modules/menu.styl'
-
-
-@import 'pages/index.styl'
-
-
-@import 'media.styl'
