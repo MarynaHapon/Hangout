@@ -33,19 +33,55 @@ header
 
 
 button
-    size(100px)
-    border-radius 100%
+    size(50px,100px)
     border 0
     cursor pointer
+    overflow hidden
+    outline none
+    transition background-color .3s
+
+    &:before
+        content ""
+        position absolute
+        top 50%
+        left 50%
+        display block
+        width 0
+        padding-top 0
+        transform translate(-50%, -50%)
+
+    &:active
+        &:before
+            width 100%
+            padding-top 200%
+            transition width .2s ease-out, padding-top .2s ease-out
 
 
 #btn-black
-    position(fixed,100px,200px,,)
-    background-color #000000
-    //box-shadow inset 0 8px 9px $sour-dough, inset 0px -2px 1px $white
+    position(fixed,100px,250px,,)
+    border-radius 100% 0 0 100% / 50% 0 0 50%
+    box-shadow 0 8px 9px $sour-dough,  0px -2px 1px $white
+
+    &:active
+
+    &:before
+        border-radius 100% 0 0 100% / 50% 0 0 50%
+        background-color rgba(236, 240, 241, .3)
+
+    &#btn-black
+        background-color #000000
 
 
 #btn-white
-    position(fixed,100px,170px,,)
+    position(fixed,100px,200px,,)
+    border-radius 0 100% 100% 0 / 0 50% 50% 0
     box-shadow 0 8px 9px $sour-dough, 0px -2px 1px $white
-    background-color #ffffff
+
+    &:active
+
+    &:before
+        border-radius 0 100% 100% 0 / 0 50% 50% 0
+        background-color rgba(236, 240, 241, .3)
+
+    &#btn-white
+        background-color #ffffff
