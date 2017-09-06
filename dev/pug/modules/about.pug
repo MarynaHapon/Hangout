@@ -10,37 +10,37 @@
             h2.about-name= resume.text.name
 
             .about-personal-info
-                h4.about-personal-info-title= resume.text.personalInformation.title
-                p.about-personal-info-item= 'Email:' + ' ' + resume.text.personalInformation.email
-                p.about-personal-info-item= 'Date of birth:' + ' ' + resume.text.personalInformation.dateOfBirth
+                h4.about-title= resume.text.personalInformation.title
+                p.about-item= 'Email:' + ' ' + resume.text.personalInformation.email
+                p.about-item= 'Date of birth:' + ' ' + resume.text.personalInformation.dateOfBirth
 
 
             .about-education
-                h3.title= resume.text.education.title
+                h3.about-title= resume.text.education.title
 
                 .about-education-item
-                    p.about-education-university= resume.text.education.bachelor.university
-                    p.about-education-position= resume.text.education.bachelor.position
-                    p.about-education-time= resume.text.education.bachelor.time
+                    p.about-item= '►' + ' ' +  resume.text.education.bachelor.university
+                    p.about-item= resume.text.education.bachelor.position
+                    p.about-item= resume.text.education.bachelor.time
 
                 .about-education-item
-                    p.about-education-university= resume.text.education.master.university
-                    p.about-education-position= resume.text.education.master.position
-                    p.about-education-time= resume.text.education.master.time
+                    p.about-item= '►' + ' ' +  resume.text.education.master.university
+                    p.about-item= resume.text.education.master.position
+                    p.about-item= resume.text.education.master.time
 
 
             .about-courses
-                h3.about-courses-title= resume.text.courses.title
+                h3.about-title= resume.text.courses.title
 
                 ul.about-courses-list
                 each data, item in resume.text.courses.list
-                    li.about-courses-text= item + ' '
+                    li.about-item= '►' + ' ' + item + ' '
                         span= data
 
 
             .about-seminars
-                h3.about-seminars-title= resume.text.seminars.title
-                p.about-seminars-item= resume.text.seminars.name
+                h3.about-title= resume.text.seminars.title
+                p.about-item= resume.text.seminars.name
 
 
 .wrapper
@@ -49,25 +49,25 @@
 
 
             .about-skills
-                h3.about-skills-title= resume.text.skills.title
+                h3.about-title= resume.text.skills.title
 
                 .about-skills-list
                 each item in resume.text.skills.list
-                    p.about-skills-item= item
+                    p.about-item= '►' + ' ' + item
 
 
             .about-language
-                h3.about-language-title= resume.text.language.title
+                h3.about-title= resume.text.language.title
 
                 .about-language-list
                 each score, item in resume.text.language.list
-                    p.about-language-item= item + ' '
+                    p.about-item= '►' + ' ' +  item + ' '
                         span= score
 
 
             .about-qualities
-                h3.about-qualities-title
+                h3.about-title= resume.text.qualities.title
 
                 .about-qualities-list
                 each item in resume.text.qualities.list
-                    p.about-qualities-item= item
+                    p.about-item= '►' + ' ' +  item
