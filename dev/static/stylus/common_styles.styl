@@ -57,10 +57,11 @@ button
             transition width .2s ease-out, padding-top .2s ease-out
 
 
-#btn-black
+.btn-black
     position(fixed,100px,250px,,)
     border-radius 100% 0 0 100% / 50% 0 0 50%
     box-shadow 0 8px 9px $sour-dough,  0px -2px 1px $white
+    background-color #000000
 
     &:active
         box-shadow 0 5px 5px $sour-dough, inset 1px 1px 1px $white
@@ -69,14 +70,12 @@ button
         border-radius 100% 0 0 100% / 50% 0 0 50%
         background-color rgba(236, 240, 241, .3)
 
-    &#btn-black
-        background-color #000000
 
-
-#btn-white
+.btn-white
     position(fixed,100px,200px,,)
     border-radius 0 100% 100% 0 / 0 50% 50% 0
     box-shadow 0 8px 9px $sour-dough, 0px -2px 1px $white
+    background-color #ffffff
 
     &:active
         box-shadow 0 5px 5px $sour-dough, inset 1px 1px 1px $white
@@ -84,6 +83,3 @@ button
     &:before
         border-radius 0 100% 100% 0 / 0 50% 50% 0
         background-color rgba(236, 240, 241, .3)
-
-    &#btn-white
-        background-color #ffffff
